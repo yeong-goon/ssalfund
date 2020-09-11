@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    max-width: 768px;
+}
+body{
+    background-color: white;
+}
+a{
+    color: black;
+}
+#wrap {
+    width: 100%;
+}
+
+#header{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+
+}
+
+#header-wrap{
+    position: relative;
+    margin: 0 25px;
+    height: 60px;
+    transition: 0.5s;
+
+}
+
+#header-wrap.clicked{
+    
+    height: 380px;
+   
+}
+
+.ssal-logo{
+    height: 60px;
+    font-size: 1.3rem;
+}
+
+.ssal-logo div{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 21px 0 19px 0;
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+
+}
+
+.ssal-logo h3{
+    float: left;
+    margin-left: 3px;
+    line-height: 58px;
+
+}
+
+.menu-btn{
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px 0;
+}
+
+.menu-btn div{
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.clicked .btn1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.clicked .btn2 {
+    opacity: 0;
+}
+
+.clicked .btn3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -8px);
+    transform: rotate(45deg) translate(-6px, -5px);
+}
+
+.gnb-wrap{
+    opacity: 0;
+    margin: 0 40px;
+    transition: 0.2s ease-in-out;    
+}
+
+.clicked .gnb-wrap{
+    opacity: 1;
+    transition: 0.8s ease-in-out;    
+
+}
+
+.gnb div{
+    margin: 35px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(59, 59, 70);
+}
+
+.account div{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+#content{
+    padding-top: 60px;
+}
+
+.main-banner{
+    text-align: center;
+    margin-top: 70px;
+}
+.banner-text{
+    font-size: 2rem;
+    animation: text-fadeIn 1.5s ease;
+}
+
+.fundRegistration{
+    position: fixed;
+    text-align: center;
+    bottom: 44px;
+    margin: 0 40px;
+    width: calc(100% - 80px);    
+    background-color: rgb(59, 59, 70);
+    color: white;
+    border-radius: 6px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 1.4rem;
+    transition: 0.4s;
+    z-index: 10;
+}
+.fundRegistration.scrollDown{
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.funds{
+    margin-top: 50px;
+    position: relative;
+}
+.funds section{
+    width: 100%;
+    font-size: 1.3rem;
+    color: white;
+    height: 300px;
+    text-align: center;
+    padding-top: 30px;
+    position: absolute;
+}
+.funds section h2{
+    margin-bottom: 10px;
+}
+.funds section h2, .funds section span{
+    display: block;
+    animation: text-fadeIn 1.5s ease;
+
+}
+
+.equityFund{
+    background: url(../images/equityFund.jpg);
+    background-size: cover;
+    background-position: 50%;
+    animation: fundStart 1s ease-in-out ;
+    z-index: 1;
+}
+.balancedFund{
+    background: url(../images/balancedFund.jpg);
+    background-size: cover;
+    background-position: 50%;
+    z-index: 3;
+    animation: fundImgChange 12s ease-in-out infinite;
+    opacity: 0;
+}
+.selectiveFund{
+    background: url(../images/selectiveFund.jpg);
+    background-size: cover;
+    background-position: 50%;
+    z-index: 2;
+    animation: fundImgChange 12s ease-in-out infinite;
+    animation-delay: 4s;
+    opacity: 0;
+}
+    
+@keyframes fundStart{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fundImgChange{
+    from{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    33%{
+        opacity: 1;
+    }
+    58%{
+        opacity: 1;
+    }
+    66%{
+        opacity: 0;
+    }
+    to{
+        opacity: 0;
+    }
+
+}
+
+.description{
+    padding-top: 300px;
+    text-align: center;
+}
+
+.description section{
+    margin-top: 70px;
+}
+
+.description section p{
+    margin: 30px 0 50px;
+    color: #666;
+    opacity: 0;
+}
+
+
+
+.descriptionImg{
+    height: 450px;
+    opacity: 0;
+}
+
+.mobileService .descriptionImg{
+    background: url(../images/mobileService.jpg);
+    background-size: cover;
+    
+}
+
+.consulting .descriptionImg{
+    background: url(../images/consulting.jpg);
+    background-size: cover;
+    
+}
+
+.selecting .descriptionImg{
+    background: url(../images/selecting.jpg);
+    background-size: cover;
+    
+}
+
+.active h2{
+    animation: text-fadeIn 1.5s ease;
+}
+.active p{
+    animation: text-fadeIn 1.5s ease;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+.active .descriptionImg{
+    animation: text-fadeIn 2s ease;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes text-fadeIn{
+    0%{
+        opacity:0;
+        transform:translateY(50px)
+    }
+    to{
+        opacity:1;
+        transform:translateY(0)
+    }
+}
+.caution{
+    background-color: #2e2e2e;
+    color: white;
+    text-align: left;
+    margin-top: 0px;
+    padding: 50px 30px 0;
+}
+
+#footer{
+    color: white;
+    background: linear-gradient(to bottom,#2e2e2e,#1e1e1e 50%);
+    padding: 20px 30px 120px;
+
+}
+
+#ssal-info .ssal-logo h3{
+    color: white;
+}
+#ssal-info address{
+    font-style: normal;
+    font-size: 0.8rem;
+    padding: 2px;
+}
+#ssal-info span{
+    display: block;
+    font-size: 0.8rem;
+    padding: 2px;
+}
