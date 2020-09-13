@@ -17,7 +17,7 @@
                         <h3>SSAL</h3>
                     </a>
                 </div>
-                <div class="menu-btn" onclick="gnbBtnFunction(this)">
+                <div class="menu-btn" onclick="gnbBtnFunction()">
                     <div class="btn1"></div>
                     <div class="btn2"></div>
                     <div class="btn3"></div>
@@ -34,8 +34,8 @@
                             <span>인재채용</span>
                         </div>
                         <div class="account">
-                            <div class="user-login">Log in</div>
-                            <div class="user-registration">Sign up</div>
+                            <div class="user-login" onclick="loginBtn()">Log in</div>
+                            <div class="user-registration" onclick="loginBtn()">Sign up</div>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                     <h2>With SSAL</h2>
                 </div>
             </div>
-            <div class="fundRegistration">펀드 가입</div>
+            <div class="fundRegistration" onclick="loginBtn()">펀드 가입</div>
             <div class="funds">
                 <section class="equityFund">
                     <h2>주식형펀드</h2>
@@ -123,6 +123,21 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="login-wrap">
+        <div class="login-background" onclick="loginBgFunction()"></div>
+        <div class="login-pop">
+            <h2>SSAL</h2>
+            <form action="">
+                <label>아이디
+                    <input type="text" id="userID" name="userID" placeholder="example@ssal.com">
+                </label>
+                <label>비밀번호
+                    <input type="text" id="userPW" name="userPW" placeholder="password">
+                </label>
+                <button class="login-submit">로그인</button>
+            </form>
+        </div>
     </div>
     <script src="./js/ssal.js"></script>
 </body>

@@ -2,6 +2,7 @@ let headerWrap = document.getElementById('header-wrap');
 let fundRegistration = document.getElementsByClassName('fundRegistration');
 let descriptionSection = document.querySelectorAll('.description section');
 
+
 function gnbBtnFunction() {
     headerWrap.classList.toggle('clicked');
     fundRegistration[0].classList.toggle('scrollDown');
@@ -26,4 +27,14 @@ window.onscroll = function () {
     fundRegScroll();
     descriptionScroll(1,600);
     descriptionScroll(2,1340);
+}
+
+
+let loginWrap = document.querySelector('.login-wrap');
+
+function loginBtn() {
+    loginWrap.classList.add('clicked');
+}
+function loginBgFunction() {
+    loginWrap.classList.remove('clicked');
 }
